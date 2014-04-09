@@ -79,7 +79,7 @@
     </button>
 
     <div class="table-responsive">
-        <table class="table table-striped">
+        <table id="user-table" class="table table-striped">
             <thead>
             <tr>
                 <th>ID</th>
@@ -102,10 +102,10 @@
                 
                 <td>{{user.lastname }}</td>
                 
-                <td>{{user.email }}</td>
+                <td><a href="mailto:{{user.email}}" target="_blank">{{user.email}}</a></td>
                 
-                <td>{{user.photourl }}</td>
-                
+                <td><img src="{{user.photourl}}" class="img-thumbnail"></td>
+
                 <td>
                     <button type="submit"
                             ng-click="update(user.id)"
