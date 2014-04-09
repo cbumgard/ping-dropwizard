@@ -26,6 +26,54 @@ mvn compile
 mvn exec:exec -pl ping-service
 ```
 
+Successful compilation and startup should look like:
+
+```
+INFO  [2014-04-09 22:11:26,873] com.yammer.dropwizard.cli.ServerCommand: Starting ping
+        .__                  
+______  |__|  ____     ____  
+\____ \ |  | /    \   / ___\ 
+|  |_> >|  ||   |  \ / /_/  >
+|   __/ |__||___|  / \___  / 
+|__|             \/ /_____/  
+
+
+INFO  [2014-04-09 22:11:26,880] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2014-04-09 22:11:27,268] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2014-04-09 22:11:27,530] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    GET     /ping/{message} (io.bumgardner.ping.resources.PingResource)
+    DELETE  /ping/users/{id} (io.bumgardner.ping.resources.UserResource)
+    GET     /ping/users (io.bumgardner.ping.resources.UserResource)
+    GET     /ping/users/{id} (io.bumgardner.ping.resources.UserResource)
+    POST    /ping/users (io.bumgardner.ping.resources.UserResource)
+    PUT     /ping/users/{id} (io.bumgardner.ping.resources.UserResource)
+
+INFO  [2014-04-09 22:11:27,532] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+INFO  [2014-04-09 22:11:28,327] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedSelectChannelConnector@0.0.0.0:8080
+INFO  [2014-04-09 22:11:28,331] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:8081
+```
+
+### Optional: Build with Grunt & Bower
+
+If you have installed the latest Node.js run the following which will install Grunt and Bower and any Bower client dependencies:
+
+```
+npm install
+bower install
+```
+
+To run a Grunt server task to watch for filechanges and do live reload in the browser run:
+
+```
+grunt server
+```
+
+And you can connect to [http://localhost:9000](http://localhost:9000) for live reload.
+
 ## View in the Browser
 
 Go to [http://localhost:8080](http://localhost:8080)
