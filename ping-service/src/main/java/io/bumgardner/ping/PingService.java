@@ -1,8 +1,8 @@
 package io.bumgardner.ping;
 
 import io.bumgardner.ping.config.*;
-
-
+import io.bumgardner.ping.daos.*;
+import io.bumgardner.ping.models.*;
 import io.bumgardner.ping.resources.*;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.google.common.base.Optional;
@@ -30,6 +30,7 @@ public class PingService extends Service<PingConfiguration> {
 
     private final HibernateBundle<PingConfiguration> hibernateBundle = new HibernateBundle<PingConfiguration>(
             
+            User.class,
             Void.class
         ) {
         @Override
@@ -53,5 +54,7 @@ public class PingService extends Service<PingConfiguration> {
         
         environment.addResource(new PingResource());
         
+        environment.addResource(new UserResource(
+            new UserDAO(hibernateBundle.getSessionFactory())));
     }
 }

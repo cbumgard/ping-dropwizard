@@ -1,7 +1,45 @@
 {
 	"baseName": "ping",
 	"packageName": "io.bumgardner.ping",
-	"entities": [],
+	"entities": [
+		{
+			"name": "user",
+			"attrs": [
+				{
+					"attrName": "firstname",
+					"attrType": "String",
+					"minLength": "",
+					"maxLength": "",
+					"enumValues": [],
+					"required": true
+				},
+				{
+					"attrName": "lastname",
+					"attrType": "String",
+					"minLength": "",
+					"maxLength": "",
+					"enumValues": [],
+					"required": true
+				},
+				{
+					"attrName": "email",
+					"attrType": "String",
+					"minLength": "",
+					"maxLength": "",
+					"enumValues": [],
+					"required": true
+				},
+				{
+					"attrName": "photourl",
+					"attrType": "String",
+					"minLength": "",
+					"maxLength": "",
+					"enumValues": [],
+					"required": false
+				}
+			]
+		}
+	],
 	"resources": [
 		{
 			"name": "ping",
