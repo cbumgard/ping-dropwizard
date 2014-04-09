@@ -1,0 +1,18 @@
+{
+	"baseName": "ping",
+	"packageName": "io.bumgardner.ping",
+	"entities": [],
+	"resources": [
+		{
+			"name": "ping",
+			"methods": [
+				{
+					"methodName": "ping",
+					"methodType": "GET",
+					"methodPath": "{message}",
+					"formParams": []
+				}
+			]
+		}
+	]
+}
