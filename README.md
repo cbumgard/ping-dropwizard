@@ -2,6 +2,8 @@
 
 A small [Dropwizard](http://dropwizard.github.io/dropwizard/) web application with an [AngularJS](http://angularjs.org/) and [Bootstrap](http://getbootstrap.com/) UI built using the [AngularJS-Dropwizard Generator](https://github.com/rayokota/generator-angular-dropwizard) for [Yeoman](http://yeoman.io/). Tested on Oracle [JDK 7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) and [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
 
+You can find a live demo here: [http://ping-dropwizard.herokuapp.com/](http://ping-dropwizard.herokuapp.com/#/).
+
 ## Prerequisites
 
 ### Required
@@ -14,6 +16,10 @@ A small [Dropwizard](http://dropwizard.github.io/dropwizard/) web application wi
 * [Node.js](http://nodejs.org/) - required for Yeoman install
 * [Yeoman](http://yeoman.io/) - if you want to use the angular-dropwizard scaffolding generator
 * [AngularJS-Dropwizard Generator](https://github.com/rayokota/generator-angular-dropwizard)
+
+## Easy Dev Environment with Vagrant
+
+Use Vagrant and VirtualBox and my custom Java dev box [https://vagrantcloud.com/cbumgard/java](https://vagrantcloud.com/cbumgard/java) to get a turnkey development environment.
 
 ## Build & Start the Web Server
 
