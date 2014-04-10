@@ -59,7 +59,7 @@ INFO  [2014-04-09 22:11:28,331] org.eclipse.jetty.server.AbstractConnector: Star
 
 ### Optional: Build with Grunt & Bower
 
-If you have installed the latest Node.js run the following which will install Grunt and Bower and any Bower client dependencies:
+If you have installed the latest Node.js run the following which will install Grunt and Bower and any Bower client dependencies. NOTE: for Heroku support the package.json file was renamed (otherwise Heroku thinks this is a Node project not a Java project and does not run Maven), so you will have to rename it back to package.json before running the following steps.
 
 ```
 npm install
@@ -90,6 +90,10 @@ This gives the ability to check:
 * [Ping](http://localhost:8081/ping)
 * [Threads](http://localhost:8081/threads)
 * [Healthcheck](http://localhost:8081/healthcheck)
+
+## Heroku Deployment
+
+Be sure to follow the [Update your PATH](https://devcenter.heroku.com/articles/add-java-version-to-an-existing-maven-app#update-your-path) instructions for Java 1.7 support.
 
 ## From the Command-Line
 
