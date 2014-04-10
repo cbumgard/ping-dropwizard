@@ -27,30 +27,6 @@ database:
 
     hibernate.format_sql: true
 
-  #driverClass: org.postgresql.Driver
-  #
-  #url: jdbc:postgresql://localhost:5432/mydb?prepareThreshold=0
-  #
-  #user: vagrant
-  #
-  #password: vagrant
-  #
-  #minSize: 8
-  #
-  #maxSize: 200
-  #
-  #validationQuery: select version()
-  #
-  #properties:
-  #
-  #  hibernate.temp.use_jdbc_metadata_defaults: false
-  #
-  #  hibernate.dialect: org.hibernate.dialect.PostgreSQL82Dialect
-  #
-  #  hibernate.hbm2ddl.auto: update
-  # 
-  #  hibernate.format_sql: true
-
 # HTTP-specific options.
 http:
 
