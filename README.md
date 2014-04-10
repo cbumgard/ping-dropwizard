@@ -169,4 +169,18 @@ Percentage of the requests served within a certain time (ms)
 
 ## Database
 
-Uses [Hibernate](http://hibernate.org/) and [Derby](http://derbyjs.com/) database on filesystem ```/tmp/mydb```
+Uses [Hibernate](http://hibernate.org/) and [Derby](http://derbyjs.com/) database on filesystem ```/tmp/mydb``` in development. For production uses [PostgreSQL](http://www.postgresql.org/). Development/Production settings are controlled via the different Yaml (.yml) files in ./ping-service/.
+
+To run on Postgres, be sure to do something like the following. As the user 'vagrant', do:
+
+```
+sudo su postgres
+psql
+create user vagrant with password 'vagrant';
+create database mydb;
+grant all privileges on database mydb to vagrant;
+\q
+exit
+```
+
+You can now connect to psql as the user 'vagrant', and from a client config can set username to 'vagrant' and password to 'vagrant'.
