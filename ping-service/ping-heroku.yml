@@ -124,9 +124,9 @@ http:
       # The file to which statements will be logged. When the log file reaches the maximum size, the
       # file will be renamed example.log.1, example.log will be truncated, and new statements written
       # to it.
-      currentLogFilename: logs/ping/request.log
+      #currentLogFilename: logs/ping/request.log
 
-      archivedLogFilenamePattern: logs/ping/request-%d.log
+      #archivedLogFilenamePattern: logs/ping/request-%d.log
 
       # The maximum number of log files to retain.
       archivedFileCount: 2
@@ -149,7 +149,7 @@ http:
 logging:
 
   # The default level of all loggers. Can be OFF, FATAL, ERROR, WARN, INFO, DEBUG, TRACE, or ALL.
-  level: INFO
+  level: DEBUG
 
   # Logger-specific levels.
   loggers:
@@ -176,9 +176,9 @@ logging:
     # The file to which statements will be logged. When the log file reaches the maximum size, the
     # file will be renamed example.log.1, example.log will be truncated, and new statements written
     # to it.
-    currentLogFilename: logs/ping/ping.log
+    #currentLogFilename: logs/ping/ping.log
 
-    archivedLogFilenamePattern: logs/ping/ping-%d.log
+    #archivedLogFilenamePattern: logs/ping/ping-%d.log
 
       # The maximum number of log files to retain.
     archivedFileCount: 7
