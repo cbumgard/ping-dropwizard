@@ -5,7 +5,7 @@ database:
 
   driverClass: org.apache.derby.jdbc.EmbeddedDriver
 
-  url: jdbc:derby:./tmp/mydb;create=true
+  url: jdbc:derby:tmp/mydb;create=true
 
   user: admin
 
@@ -148,9 +148,9 @@ http:
       # The file to which statements will be logged. When the log file reaches the maximum size, the
       # file will be renamed example.log.1, example.log will be truncated, and new statements written
       # to it.
-      currentLogFilename: ./log/ping/request.log
+      currentLogFilename: logs/ping/request.log
 
-      archivedLogFilenamePattern: ./log/ping/request-%d.log
+      archivedLogFilenamePattern: logs/ping/request-%d.log
 
       # The maximum number of log files to retain.
       archivedFileCount: 2
@@ -200,9 +200,9 @@ logging:
     # The file to which statements will be logged. When the log file reaches the maximum size, the
     # file will be renamed example.log.1, example.log will be truncated, and new statements written
     # to it.
-    currentLogFilename: ./log/ping/ping.log
+    currentLogFilename: logs/ping/ping.log
 
-    archivedLogFilenamePattern: ./log/ping/ping-%d.log
+    archivedLogFilenamePattern: logs/ping/ping-%d.log
 
       # The maximum number of log files to retain.
     archivedFileCount: 7
