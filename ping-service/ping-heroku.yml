@@ -3,33 +3,9 @@ sampleProperty: hello!
 # Database settings.
 database:
 
-  driverClass: org.apache.derby.jdbc.EmbeddedDriver
-
-  url: jdbc:derby:tmp/mydb;create=true
-
-  user: admin
-
-  password: admin
-
-  minSize: 8
-
-  maxSize: 200
-
-  validationQuery: values 1
-
-  properties:
-
-    hibernate.temp.use_jdbc_metadata_defaults: false
-
-    hibernate.dialect: org.hibernate.dialect.DerbyTenSevenDialect
-
-    hibernate.hbm2ddl.auto: update
-
-    hibernate.format_sql: true
-
-  #driverClass: org.postgresql.Driver
+  #driverClass: org.apache.derby.jdbc.EmbeddedDriver
   #
-  #url: jdbc:postgresql://localhost:5432/mydb?prepareThreshold=0
+  #url: jdbc:derby:tmp/mydb;create=true
   #
   #user: admin
   #
@@ -39,17 +15,41 @@ database:
   #
   #maxSize: 200
   #
-  #validationQuery: select version()
+  #validationQuery: values 1
   #
   #properties:
   #
   #  hibernate.temp.use_jdbc_metadata_defaults: false
   #
-  #  hibernate.dialect: org.hibernate.dialect.PostgreSQL82Dialect
+  #  hibernate.dialect: org.hibernate.dialect.DerbyTenSevenDialect
   #
   #  hibernate.hbm2ddl.auto: update
-  # 
+  #
   #  hibernate.format_sql: true
+
+  driverClass: org.postgresql.Driver
+  
+  url: jdbc:postgresql://ec2-54-197-241-91.compute-1.amazonaws.com:5432/d93cuktkq1cfrd?prepareThreshold=0
+  
+  user: qnkrgqsoxeqggg
+  
+  password: THAIn_SA-aTes2jfTFHZ5YGUUF
+  
+  minSize: 8
+  
+  maxSize: 200
+  
+  validationQuery: select version()
+  
+  properties:
+  
+    hibernate.temp.use_jdbc_metadata_defaults: false
+  
+    hibernate.dialect: org.hibernate.dialect.PostgreSQL82Dialect
+  
+    hibernate.hbm2ddl.auto: update
+   
+    hibernate.format_sql: true
 
 # HTTP-specific options.
 http:
