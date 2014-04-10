@@ -149,7 +149,7 @@ http:
 logging:
 
   # The default level of all loggers. Can be OFF, FATAL, ERROR, WARN, INFO, DEBUG, TRACE, or ALL.
-  level: DEBUG
+  level: INFO
 
   # Logger-specific levels.
   loggers:

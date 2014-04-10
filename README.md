@@ -97,6 +97,11 @@ Be sure to follow the [Update your PATH](https://devcenter.heroku.com/articles/a
 
 It should look like ```heroku config:set PATH=/app/.jdk/bin:/usr/local/bin:/usr/bin:/bin```
 
+Also critical for PostgreSQL to connect is to set your ENV properties correctly for sensitive settings like PostgreSQL db/user/password. I recommend putting these in a .env file and synchronizing them between Heroku and your local environment, as in [this article](https://devcenter.heroku.com/articles/config-vars).
+
+Make sure you set this ENV variable, replacing <VARS> with their Heroku PostgreSQL plugin settings:
+DATABASE_URL=postgres://<HOSTNAME>:5432/<DBNAME>?user=<USER>&password=<PASSWORD>&ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory
+
 ## From the Command-Line
 
 ### cURL
