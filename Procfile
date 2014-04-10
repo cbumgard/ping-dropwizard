@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -Ddw.http.port=$PORT -Ddw.http.adminPort=$PORT -jar ping-service/target/ping-service-0.0.1-SNAPSHOT.jar server ping-service/ping-heroku.yml
+web: java $JAVA_OPTS -Ddw.http.port=$PORT -Ddw.http.adminPort=$PORT -Ddw.database.user=$HEROKU_POSTGRESQL_USERNAME -Ddw.database.password=$HEROKU_POSTGRESQL_PASSWORD -Ddw.database.url="jdbc:postgresql://$HEROKU_POSTGRESQL_HOSTNAME/$HEROKU_POSTGRESQL_DBNAME?ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory" -jar ping-service/target/ping-service-0.0.1-SNAPSHOT.jar server ping-service/ping-heroku.yml

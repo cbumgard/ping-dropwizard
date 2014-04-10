@@ -95,6 +95,8 @@ This gives the ability to check:
 
 Be sure to follow the [Update your PATH](https://devcenter.heroku.com/articles/add-java-version-to-an-existing-maven-app#update-your-path) instructions for Java 1.7 support.
 
+It should look like ```heroku config:set PATH=/app/.jdk/bin:/usr/local/bin:/usr/bin:/bin```
+
 ## From the Command-Line
 
 ### cURL
